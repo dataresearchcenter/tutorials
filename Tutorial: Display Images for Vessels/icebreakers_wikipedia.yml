@@ -1,0 +1,18 @@
+icebreakers_wikipedia:
+  queries:
+    - csv_url: "file:///Users/cathedral/Work/id/jupyter_notebooks/icebreakers.csv"
+      entities:
+        icebreaker:
+          schema: Vessel
+          keys:
+            - qid
+            - url
+          properties:
+            name:
+              column: name
+            country:
+              column: country
+            wikidataId:
+              column: qid
+            wikipediaUrl:
+              column: url
