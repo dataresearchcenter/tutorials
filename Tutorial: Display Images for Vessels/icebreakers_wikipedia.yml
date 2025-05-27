@@ -1,6 +1,6 @@
 icebreakers_wikipedia:
   queries:
-    - csv_url: "file:///Users/cathedral/Work/id/jupyter_notebooks/icebreakers.csv"
+    - csv_url: "file:///<PATH>/icebreakers.csv"
       entities:
         icebreaker:
           schema: Vessel
