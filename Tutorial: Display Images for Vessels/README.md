@@ -11,3 +11,20 @@ Then, in your command line, run:
 
 In order to write these entities to OpenAleph, create an investigation (for exmaple, called "Icebreakers 🧊 🔨" ) and copy the foreign ID of this collection. Run the command:
 `export ALEPH_HOST=<HOST>; export ALEPH_API_KEY=<API KEY; alephclient write-entities -i icebreakers.entities -f <foreign_id_of_collection>`
+
+### Running OpenAleph locally
+
+If you want to run this tutorial in your local OpenAleph instance, you need a running instance of [ftm-assets](https://github.com/dataresearchcenter/ftm-assets/). The [README](https://github.com/dataresearchcenter/ftm-assets/blob/main/README.md) contains command to run `ftm-assets` either on your development device or as a Docker container. 
+
+Set the `FTM_ASSETS_URL` variable to point to the running `ftm-assets` instance, either in the docker-compose file:
+```
+api:
+    build:
+      context: .
+    ...
+    environment:
+      ...
+      FTM_ASSETS_URL: "http://localhost:8000/api"
+...
+```
+or in your local environment, if you are not running OpenAleph using Docker containers. 
